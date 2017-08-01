@@ -1,0 +1,19 @@
+{
+    "name": "unapi/anticaptcha-common",
+    "description": "Unapi anticaptcha common classes",
+    "keywords": ["unapi", "guzzle", "promise", "captcha", "anticaptcha"],
+    "type": "library",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.1.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload" : {
+        "psr-4": {
+            "unapi\\anticaptcha\\common\\": "src"
+        }
+    },
+    "config": {
+        "process-timeout": 1800
+    }
+}
