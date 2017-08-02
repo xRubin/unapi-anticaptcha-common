@@ -10,4 +10,9 @@ interface AnticaptchaServiceInterface
      * @return PromiseInterface
      */
     public function resolve(AnticaptchaTaskInterface $task): PromiseInterface;
+
+    /**
+     * @return PromiseInterface
+     */
+    public function getBalance(): PromiseInterface;
 }
