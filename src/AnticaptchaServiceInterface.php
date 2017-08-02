@@ -6,9 +6,8 @@ use GuzzleHttp\Promise\PromiseInterface;
 interface AnticaptchaServiceInterface
 {
     /**
-     * @param string $image
-     * @param array $params
+     * @param AnticaptchaTaskInterface $task
      * @return PromiseInterface
      */
-    public function decodeImage(string $image, array $params = []): PromiseInterface;
+    public function resolve(AnticaptchaTaskInterface $task): PromiseInterface;
 }
