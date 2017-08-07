@@ -7,9 +7,10 @@ interface AnticaptchaServiceInterface
 {
     /**
      * @param AnticaptchaTaskInterface $task
+     * @param array $options
      * @return PromiseInterface
      */
-    public function resolve(AnticaptchaTaskInterface $task): PromiseInterface;
+    public function resolve(AnticaptchaTaskInterface $task, $options = []): PromiseInterface;
 
     /**
      * @return PromiseInterface
