@@ -7,9 +7,27 @@ use unapi\anticaptcha\common\AnticaptchaTaskInterface;
 class ReCaptcha2Task implements AnticaptchaTaskInterface
 {
     /** @var string адрес страницы на которой решается капча */
-    protected $siteUrl;
-    /** @var string люч-индентификатор рекапчи на целевой странице. <div class="g-recaptcha" data-sitekey="ВОТ_ЭТОТ"></div>  */
-    protected $siteKey;
+    private $siteUrl;
+    /** @var string ключ-индентификатор рекапчи на целевой странице. <div class="g-recaptcha" data-sitekey="ВОТ_ЭТОТ"></div> */
+    private $siteKey;
+
+    /**
+     * @param array $config
+     */
+    public function __construct(array $config = [])
+    {
+        if (!isset($config['siteUrl'])) {
+            throw new \InvalidArgumentException('Site Url required');
+        } else {
+            $this->setSiteUrl($config['siteUrl']);
+        }
+
+        if (!isset($config['siteKey'])) {
+            throw new \InvalidArgumentException('Site Key required');
+        } else {
+            $this->setSiteKey($config['siteKey']);
+        }
+    }
 
     /**
      * @return string
