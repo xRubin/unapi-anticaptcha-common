@@ -6,5 +6,5 @@ use unapi\interfaces\UnapiException;
 
 class WrongSolutionException extends UnapiException
 {
-    
+
 }
