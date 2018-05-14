@@ -7,7 +7,7 @@
     "require": {
         "php": ">=7.1.0",
         "guzzlehttp/guzzle": "^6.3",
-        "unapi/unapi": "^1.1.1"
+        "unapi/unapi": "^1.1.2"
     },
     "autoload" : {
         "psr-4": {

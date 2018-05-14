@@ -2,7 +2,7 @@
 
 namespace unapi\anticaptcha\common\exceptions;
 
-use unapi\interfaces\UnapiException;
+use unapi\exceptions\UnapiException;
 
 class WrongSolutionException extends UnapiException
 {
